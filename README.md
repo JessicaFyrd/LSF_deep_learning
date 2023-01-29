@@ -4,6 +4,14 @@ This is a video translator for french alphabet sign language.This translator is 
 
 To obtain this, first, we built a train and test dataset (camera.py). For that, we decided to use the same type of image we were going to have during the video which are photos centered on the hand. Those photos are obtained by finding the hand and putting a bounding box. After obtaining 120 photos for the training group (40 per person in the group) and around 30 (10 per person) for the test set, those data were used to train the neural network. This network is a CNN based on LeNet5. The save model is then used in the video : each photo of the video is given to the model in order to obtain a prediction and the result with the probability is printed on the image.
 
+Examples of images that trained the neural network:
+
+![A_40](https://user-images.githubusercontent.com/103188608/215350648-83cd6c3b-dbfd-4e78-9ba4-bf5f20425cae.jpg)
+
+![A_Alex_11](https://user-images.githubusercontent.com/103188608/215350655-35042eb0-5bb6-4727-a0d8-3926c86264de.jpg)
+
+![A_Gab_5](https://user-images.githubusercontent.com/103188608/215350664-1e4bfcb4-fc74-44b9-9490-555671f3dfdc.jpg)
+
 The results on the test data (made with a mean of 10 tries) is around 93 % with a loss fonction of around 0,3.
 
 The result on the video is the following:
